@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CBZ_Account_Opening_Letter" pageWidth="595" pageHeight="650" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="cb2a0001-1234-5678-abcd-cb2a00000001">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="customerName" class="java.lang.String"/>
+	<parameter name="accountType" class="java.lang.String"/>
+	<parameter name="accountName" class="java.lang.String"/>
+	<parameter name="accountNumber" class="java.lang.String"/>
+	<parameter name="branchCode" class="java.lang.String"/>
+	<parameter name="branchName" class="java.lang.String"/>
+	<parameter name="swiftCode" class="java.lang.String"/>
+	<parameter name="currency" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="609" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="134" width="535" height="22" forecolor="#000000" uuid="cb2a0001-0001-0001-0001-000000000001"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Welcome to CBZ Bank! Your account is now active.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="168" width="535" height="18" forecolor="#000000" uuid="cb2a0001-0001-0001-0001-000000000002"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Dear " + ($P{customerName} != null ? $P{customerName} : "[Customer Name]") + ","]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="198" width="535" height="50" forecolor="#000000" uuid="cb2a0001-0001-0001-0001-000000000003"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial" size="11"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[We are pleased to inform you that your application with CBZ Bank has been reviewed and approved. Your new account is now fully set up and ready for use. Please find your account details summarised below.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="247" width="535" height="18" forecolor="#000000" uuid="cb2a0001-0001-0001-0001-000000000004"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Your Account Details are provided below:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="270" width="267" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="7badd747-220d-48d2-95aa-31520ff548e9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="270" width="263" height="20" forecolor="#000000" uuid="16732539-e879-4c93-b59b-867ab06b9717"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Type]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="267" y="270" width="268" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="c14962c3-60a6-4063-a387-278f40b26838"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="270" width="264" height="20" forecolor="#000000" uuid="cf96f6a3-3767-4c25-838a-06d7be11e0c5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{accountType}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="290" width="267" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="0ea574ad-4129-4e9f-a7a5-08c16d31d07e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="290" width="263" height="20" forecolor="#000000" uuid="f40d5f90-8e05-49ff-86a1-9c3f0e6f6288"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Currency]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="267" y="290" width="268" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="27b6835c-b433-496e-b6b3-8b19e35f82ec"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="290" width="264" height="20" forecolor="#000000" uuid="d172b516-e8d0-4706-9066-88f47d77af42"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{currency}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="310" width="267" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="fa7b353d-9b47-48b7-bb21-611bf30f88c9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="310" width="263" height="20" forecolor="#000000" uuid="8d9bd0aa-c405-480b-8c26-cb4880d6b986"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Name]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="267" y="310" width="268" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="2f3fedcf-4ec5-4498-b6f7-af506ccb4be5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="310" width="263" height="20" forecolor="#000000" uuid="78790259-3fa6-42bf-b826-c57bf355714d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{accountName}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="330" width="267" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="fef54e30-dc06-4e25-a403-2de365d6ee40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="330" width="263" height="20" forecolor="#000000" uuid="b6e50e85-29ed-4b9c-832b-9d32c02d11a3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Number]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="267" y="330" width="268" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="48f08580-6da5-45a1-9de0-c7189ed890a7"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="330" width="264" height="20" forecolor="#000000" uuid="82ee3ade-4d13-4410-98c4-3d1b70ef20ad"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{accountNumber}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="350" width="267" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="598e1ceb-8cc5-4275-87e0-4a2a11ad5dad"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="350" width="263" height="20" forecolor="#000000" uuid="1e649c75-0e15-4070-9130-ced93fe833ac"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Branch Code]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="267" y="350" width="268" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="53fc2569-da43-45da-8488-84855a1aeb25"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="350" width="264" height="20" forecolor="#000000" uuid="061da8af-6558-43bb-9623-7a18169e28d4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{branchCode}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="370" width="267" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="109350b5-a973-4e95-b693-3e87fd964b19"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="370" width="156" height="20" forecolor="#000000" uuid="6f037a38-da96-424d-9368-74f26fe6a05e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Branch Name]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="267" y="370" width="268" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="07ef661f-4930-4447-9cc3-24de2abc9915"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="370" width="169" height="20" forecolor="#000000" uuid="af52a202-fd68-4b21-bdf6-e999b8e29c3e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{branchName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="425" width="535" height="65" forecolor="#000000" uuid="cb2a0001-0001-0001-0001-000000000020"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial" size="11"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[For your reference, we have enclosed the Terms and Conditions applicable to your account. To begin transacting, you may deposit funds or initiate a transfer into your account using the details outlined in the table above.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="485" width="535" height="35" forecolor="#000000" uuid="cb2a0001-0001-0001-0001-000000000021"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial" size="11"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[It is a privilege to have you as a valued client and we look forward to providing you with exceptional banking services throughout our relationship.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="540" width="535" height="18" forecolor="#000000" uuid="cb2a0001-0001-0001-0001-000000000022"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<text><![CDATA[Regards]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="26" width="195" height="11" forecolor="#000000" uuid="136b5d21-53a9-46a3-8b57-744b660c6010"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[3rd Floor, Union House,]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-12" y="-3" width="172" height="110" uuid="a4a639dd-0599-4498-a5a6-45417da614c4"/>
+				<imageExpression><![CDATA["cbz logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="425" y="13" width="195" height="11" forecolor="#000000" uuid="cfa6a439-04d1-4cf0-b27f-8803b30fc132"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HEAD OFFICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="78" width="28" height="11" forecolor="#000000" uuid="b3d8c610-06eb-4312-989e-8d6d368ff2c9"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="0" width="195" height="11" forecolor="#000000" uuid="10ebb5db-0cac-4d9e-b123-a9f61fa3015a"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[Partners for Success]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="78" width="166" height="11" forecolor="#000000" uuid="73c77c13-cfa0-4a34-a005-d4243c67ecd7"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[ contactcentre@cbz.co.zw]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="65" width="174" height="11" forecolor="#000000" uuid="9e4de3f3-3b6a-4ae5-a8a4-cd87c7383544"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[ +263 08677004052]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="464" y="91" width="156" height="11" forecolor="#000000" uuid="27cb3b34-b25d-4bd6-b805-674e7b4fd1e0"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[ www.cbz.co.zw]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="91" width="38" height="11" forecolor="#000000" uuid="b14147ec-8a70-4852-9795-7e2023d0d787"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Website:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="39" width="195" height="11" forecolor="#000000" uuid="60db56c7-68d5-4eb1-807b-dbe43a65bd84"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[60 Kwame Nkrumah Avenue]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="65" width="20" height="11" forecolor="#000000" uuid="e25fc351-05a4-46a0-ae47-c716b7c394ec"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="52" width="195" height="11" forecolor="#000000" uuid="7468382b-b4a5-453a-b5a0-bf280264c1c1"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[P.O.Box 3313, Harare, Zimbabwe.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-30" y="110" width="700" height="1" forecolor="#CCCCCC" uuid="156a080c-22e0-454e-8fdd-7e354ccd2672">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement x="267" y="389" width="268" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="dd48cbb6-cd5e-4e6a-898b-919fd0958ea2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="390" width="267" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="d1ea6aee-b871-4559-abfa-0a0fdfc594f4"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="390" width="169" height="20" forecolor="#000000" uuid="439de7cc-2c40-4026-9805-1d5796b2db12">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{swiftCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="390" width="156" height="20" forecolor="#000000" uuid="80e53634-3177-433d-90d3-b9959ff879db"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Swift Code]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
